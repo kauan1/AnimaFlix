@@ -31,6 +31,7 @@ function CadastroCategoria() {
       .then(async (res) => {
         const resp = await res.json();
         setCategorias([...resp]);
+        console.log('ola');
       });
   }, []);
 
