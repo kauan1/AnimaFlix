@@ -192,6 +192,54 @@
       "url": "https://www.youtube.com/watch?v=mzy-LYWe0Lc",
       "categoriaId": 1,
       "id": 25
+    },
+    {
+      "titulo": "TÔ CARENTE, ME AJUDA?",
+      "url": "https://www.youtube.com/watch?v=mzy-LYWe0Lc",
+      "categoriaId": {
+        "id": 2,
+        "titulo": "Back End",
+        "cor": "#00C86F",
+        "link_extra": {
+          "text": "Cursos de Back End na Alura",
+          "url": "https://www.alura.com.br/cursos-online-programacao"
+        }
+      },
+      "id": 26
+    },
+    {
+      "titulo": "TÔ CARENTE, ME AJUDA?",
+      "url": "https://www.youtube.com/watch?v=mzy-LYWe0Lc",
+      "categoriaId": {
+        "id": 2,
+        "titulo": "Back End",
+        "cor": "#00C86F",
+        "link_extra": {
+          "text": "Cursos de Back End na Alura",
+          "url": "https://www.alura.com.br/cursos-online-programacao"
+        }
+      },
+      "id": 27
+    },
+    {
+      "titulo": "TÔ CARENTE, ME AJUDA?",
+      "url": "https://www.youtube.com/watch?v=mzy-LYWe0Lc",
+      "categoriaId": {
+        "id": 2,
+        "titulo": "Back End",
+        "cor": "#00C86F",
+        "link_extra": {
+          "text": "Cursos de Back End na Alura",
+          "url": "https://www.alura.com.br/cursos-online-programacao"
+        }
+      },
+      "id": 28
+    },
+    {
+      "titulo": "TÔ CARENTE, ME AJUDA?",
+      "url": "https://www.youtube.com/watch?v=mzy-LYWe0Lc",
+      "categoriaId": 2,
+      "id": 29
     }
   ]
 }
