@@ -3,30 +3,23 @@ import { Link } from 'react-router-dom';
 import PageDeafault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
+import useForm from '../../../hooks/useForm';
 
 function CadastroCategoria() {
   const [categorias, setCategorias] = useState([]);
 
   const valoresIniciais = {
-    nome: '',
+    titulo: '',
     descricao: '',
     cor: '',
   };
-  const [values, setValues] = useState(valoresIniciais);
 
-  function setValue(chave, valor) {
-    setValues({
-      ...values,
-      [chave]: valor,
-    });
-  }
-
-  function handleChange(e) {
-    setValue(e.target.getAttribute('name'), e.target.value);
-  }
+  const { handleChange, values, clearForm } = useForm(valoresIniciais);
 
   useEffect(() => {
-    const URL_TOP = 'http://localhost:8080/categorias';
+    const URL_TOP = window.location.hostname.includes('localhost')
+      ? 'http://localhost:8080/categorias'
+      : 'https://devnauakflix.herokuapp.com/categorias';
     fetch(URL_TOP)
       .then(async (res) => {
         const resp = await res.json();
@@ -48,15 +41,15 @@ function CadastroCategoria() {
           ...categorias,
           values,
         ]);
-        setValues(valoresIniciais);
+        clearForm();
       }}
       >
 
         <FormField
           labelText="Nome da Categoria:"
           type="text"
-          name="nome"
-          value={values.nome}
+          name="titulo"
+          value={values.titulo}
           onChange={handleChange}
         />
         <FormField
@@ -87,7 +80,7 @@ function CadastroCategoria() {
 
       <ul>
         {categorias.map((categoria, indice) => (
-          <li key={`${categoria}${indice}`}>{categoria.nome}</li>
+          <li key={`${categoria}${indice}`}>{categoria.titulo}</li>
         ))}
       </ul>
 
